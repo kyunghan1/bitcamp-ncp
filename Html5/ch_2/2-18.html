@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>HTML TEXT Basic Page</title>
+</head>
+<body>
+    <table border="1">
+        <caption>Caption</caption>
+        <colgroup>
+            <col span="2" style="background: red" /> <!--span=2 는 두칸을 지정-->
+            <col style="background: blue" /> <!--끝태그 / 있어도 되고 없어도댐-->
+        </colgroup>
+        <thead style="background: green"> <!--태그 안에 스타일 지정 = inline 스타일이라고 한다 (<thead><tfoot>inline이 최우선 적용)-->
+            <tr>                              
+                <th>Table Header</th>
+                <th>Table Header</th>
+                <th>Table Header</th>
+            </tr>
+        </thead>
+        <tbody>
+            <tr>
+                <td>Table Data</td>
+                <td>Table Data</td>
+                <td>Table Data</td>
+            </tr>
+            <tr>
+                <td>Table Data</td>
+                <td>Table Data</td>
+                <td>Table Data</td>
+            </tr>
+            <tr>
+                <td>Table Data</td>
+                <td>Table Data</td>
+                <td>Table Data</td>
+            </tr>
+        </tbody>
+        <tfoot style="background: yellow">
+            <tr>
+                <td>Table Data</td>
+                <td>Table Data</td>
+                <td>Table Data</td>
+            </tr>
+        </tfoot>
+    </table>
+</body>
+</html>

@@ -1,0 +1,653 @@
+<!DOCTYPE html>
+<!-- saved from url=(0028)https://kyunghan1.github.io/ -->
+<html lang="ko" class=" js "><head><meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+    <style> 
+      ::-webkit-scrollbar{ 
+        width: 10px;
+        height: 10px;
+      }
+
+      ::-webkit-scrollbar-track {
+        width: 0px;
+        background-color: rgba(224, 224, 224, 0.2);
+        /* border-radius: 5px; */
+      }
+
+      ::-webkit-scrollbar-thumb {
+        width: 0px;
+        background-color: rgba(220, 219, 218, 0.6);
+        border-radius: 5px;
+      }
+
+      ::-webkit-scrollbar-thumb:hover {
+        width: 10px;
+        height: 20px;
+        /* background-color: rgba(190, 190, 190, 0.2); */
+        background-color: rgba(193, 192, 191, 0.7);
+        border-radius: 5px;
+      }
+
+      ::-webkit-scrollbar-track:hover {
+        width: 10px;
+        /* background-color: rgba(150, 150, 150, 0.1); */
+        background-color: rgba(224, 224, 224, 0.5);
+        border-radius: 5px;
+        /* background: transparent; */
+        /* border-radius: 10px; */
+      }
+
+      ::-webkit-scrollbar-button:start:decrement,::-webkit-scrollbar-button:end:increment {
+          width:0px;
+          height: 0px;
+          /* background-color: rgb(14, 221, 24); */
+          /* border-radius: 50%; */
+      }
+    </style>
+    
+    
+
+<!-- begin _includes/seo.html --><title>KyungHan DevLog</title>
+<meta name="description" content="this is my blog!">
+
+
+  <meta name="author" content="khdevlog">
+  
+
+
+<meta property="og:type" content="website">
+<meta property="og:locale" content="ko_KR">
+<meta property="og:site_name" content="KyungHan DevLog">
+<meta property="og:title" content="KyungHan DevLog">
+<meta property="og:url" content="https://kyunghan1.github.io//">
+
+
+  <meta property="og:description" content="this is my blog!">
+
+
+
+
+
+
+
+
+
+
+
+  
+
+  
+
+
+<link rel="canonical" href="https://kyunghan1.github.io//">
+
+
+
+  <link rel="next" href="https://kyunghan1.github.io//page2/">
+
+
+<script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    
+      "@type": "Person",
+      "name": "KyungHan",
+      "url": "https://kyunghan1.github.io//"
+    
+  }
+</script>
+
+
+
+
+
+
+<!-- end _includes/seo.html -->
+
+
+
+  <link href="https://kyunghan1.github.io/feed.xml" type="application/atom+xml" rel="alternate" title="KyungHan DevLog Feed">
+
+
+<!-- https://t.co/dKP3o1e -->
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+<script>
+  document.documentElement.className = document.documentElement.className.replace(/\bno-js\b/g, '') + ' js ';
+</script>
+
+<!-- For all browsers -->
+<link rel="stylesheet" href="./KyungHan DevLog_files/main.css">
+<link rel="stylesheet" href="./KyungHan DevLog_files/all.min.css">
+
+<!--[if IE]>
+  <style>
+    /* old IE unsupported flexbox fixes */
+    .greedy-nav .site-title {
+      padding-right: 3em;
+    }
+    .greedy-nav button {
+      position: absolute;
+      top: 0;
+      right: 0;
+      height: 100%;
+    }
+  </style>
+<![endif]-->
+
+
+    <!-- start custom head snippets -->
+
+<!-- insert favicons. use https://realfavicongenerator.net/ -->
+
+<!-- end custom head snippets -->
+
+
+    <link rel="apple-touch-icon" sizes="180x180" href="https://kyunghan1.github.io/kyunghan1.github.io//assets/images/favicon/apple-touch-icon.png">
+    <link rel="icon" type="image/png" sizes="32x32" href="https://kyunghan1.github.io/assets/images/favicon/favicon-32x32.png">
+    <link rel="icon" type="image/png" sizes="16x16" href="https://kyunghan1.github.io/assets/images/favicon/favicon-16x16.png">
+    <link rel="manifest" href="https://kyunghan1.github.io/assets/images/favicon/site.webmanifest">
+    <link rel="mask-icon" href="https://kyunghan1.github.io/assets/images/favicon/safari-pinned-tab.svg" color="#5bbad5">
+    <meta name="msapplication-TileColor" content="#ffc40d">
+    <meta name="theme-color" content="#ffffff">
+  <style id="fit-vids-style">.fluid-width-video-wrapper{width:100%;position:relative;padding:0;}.fluid-width-video-wrapper iframe,.fluid-width-video-wrapper object,.fluid-width-video-wrapper embed {position:absolute;top:0;left:0;width:100%;height:100%;}</style></head>
+
+  <body class="layout--home">
+    <nav class="skip-links">
+  <h2 class="screen-reader-text">Skip links</h2>
+  <ul>
+    <li><a href="https://kyunghan1.github.io/#site-nav" class="screen-reader-shortcut">Skip to primary navigation</a></li>
+    <li><a href="https://kyunghan1.github.io/#main" class="screen-reader-shortcut">Skip to content</a></li>
+    <li><a href="https://kyunghan1.github.io/#footer" class="screen-reader-shortcut">Skip to footer</a></li>
+  </ul>
+</nav>
+
+    <!--[if lt IE 9]>
+<div class="notice--danger align-center" style="margin: 0;">You are using an <strong>outdated</strong> browser. Please <a href="https://browsehappy.com/">upgrade your browser</a> to improve your experience.</div>
+<![endif]-->
+
+    
+
+<div class="masthead">
+  <div class="masthead__inner-wrap">
+    <div class="masthead__menu">
+      <nav id="site-nav" class="greedy-nav">
+        
+        <a class="site-title" href="https://kyunghan1.github.io/">
+          KyungHan DevLog
+          
+        </a>
+        <ul class="visible-links"><li class="masthead__menu-item">
+              <a href="https://kyunghan1.github.io/">Home</a>
+            </li><li class="masthead__menu-item">
+              <a href="https://kyunghan1.github.io/about/">About</a>
+            </li><li class="masthead__menu-item">
+              <a href="https://github.com/kyunghan1">GitHub</a>
+            </li></ul>
+        
+        <button class="greedy-nav__toggle hidden" type="button" count="0">
+          <span class="visually-hidden">Toggle menu</span>
+          <div class="navicon"></div>
+        </button>
+        <ul class="hidden-links hidden"></ul>
+      </nav>
+    </div>
+  </div>
+</div>
+
+
+    <div class="initial-content">
+      
+
+
+
+<div id="main" role="main">
+  
+  <div class="sidebar sticky">
+  
+
+
+<div itemscope="" itemtype="https://schema.org/Person">
+
+  
+    <div class="author__avatar">
+      
+        <img src="./KyungHan DevLog_files/me.png" alt="khdevlog" itemprop="image">
+      
+    </div>
+  
+
+  <!-- 2022.02.17 author content hidden -->
+  <!-- <div class="author__content">
+    
+      <h3 class="author__name" itemprop="name">khdevlog</h3>
+    
+    
+  </div> -->
+
+  <div class="author__urls-wrapper">
+    <!-- <button class="btn btn--inverse">Follow</button> -->
+    <ul class="author__urls social-icons">
+      
+
+      
+
+      
+
+      
+
+      
+
+      
+
+      
+
+      
+
+      
+
+      
+
+      
+
+      
+
+      
+
+      
+
+      
+
+      
+
+      
+
+      
+
+      
+
+      
+
+      
+
+      
+
+      
+
+      
+
+      
+
+      
+
+      <!--
+  <li>
+    <a href="http://link-to-whatever-social-network.com/user/" itemprop="sameAs" rel="nofollow noopener noreferrer">
+      <i class="fas fa-fw" aria-hidden="true"></i> Custom Social Profile Link
+    </a>
+  </li>
+-->
+    </ul>
+  </div>
+</div>
+
+  
+    
+      
+      
+      
+      
+    
+    
+      
+
+<nav class="nav__list">
+  
+  <input id="ac-toc" name="accordion-toc" type="checkbox">
+  <label for="ac-toc">Toggle menu</label>
+  <ul class="nav__items">
+    <!-- <li>
+      <span class="nav__total">🌴 Total Posts: 10</span>
+    </li> -->
+    
+    
+      <li>
+        
+              <a href="https://kyunghan1.github.io/categories/naver-cloud-camp/"><span class="nav__sub-title">Naver Cloud Camp</span></a>
+        
+
+        
+      </li>
+    
+      <li>
+        
+              <a href="https://kyunghan1.github.io/categories/knowledge/"><span class="nav__sub-title">Knowledge</span></a>
+        
+
+        
+      </li>
+    
+      <li>
+        
+              <a href="https://kyunghan1.github.io/categories/git/"><span class="nav__sub-title">Git</span></a>
+        
+
+        
+      </li>
+    
+  </ul>
+</nav>
+
+    
+  
+  </div>
+
+
+
+  <div class="archive">
+    
+      <h1 id="page-title" class="page__title"></h1>
+    
+    
+
+<h3 class="archive__subtitle">Recent posts</h3>
+
+
+
+
+<div class="entries-list">
+  
+    
+
+
+
+<div class="list__item">
+  <article class="archive__item" itemscope="" itemtype="https://schema.org/CreativeWork">
+    
+    <h2 class="archive__item-title no_toc" itemprop="headline">
+      
+        <a href="https://kyunghan1.github.io/naver-cloud-camp/HTMLtag" rel="permalink">HTML5 시맨틱(semantic) 태그
+</a>
+      
+    </h2>
+    
+
+  <p class="page__meta">
+    
+      
+      <span class="page__meta-date">
+        <i class="far fa-calendar-alt" aria-hidden="true"></i>
+        <time datetime="2022-11-24T00:00:00+00:00">November 24, 2022</time>
+      </span>
+    
+
+    
+
+    
+  </p>
+
+
+    <p class="archive__item-excerpt" itemprop="description">시맨틱태그의 여러가지 태그와 용도
+</p>
+  </article>
+</div>
+
+  
+    
+
+
+
+<div class="list__item">
+  <article class="archive__item" itemscope="" itemtype="https://schema.org/CreativeWork">
+    
+    <h2 class="archive__item-title no_toc" itemprop="headline">
+      
+        <a href="https://kyunghan1.github.io/naver-cloud-camp/HTML2" rel="permalink">[Day14] UTF-8
+</a>
+      
+    </h2>
+    
+
+  <p class="page__meta">
+    
+      
+      <span class="page__meta-date">
+        <i class="far fa-calendar-alt" aria-hidden="true"></i>
+        <time datetime="2022-11-24T00:00:00+00:00">November 24, 2022</time>
+      </span>
+    
+
+    
+
+    
+  </p>
+
+
+    <p class="archive__item-excerpt" itemprop="description">characterset: ASCII, ISO-8859-1, EUC-KR, CP949
+</p>
+  </article>
+</div>
+
+  
+    
+
+
+
+<div class="list__item">
+  <article class="archive__item" itemscope="" itemtype="https://schema.org/CreativeWork">
+    
+    <h2 class="archive__item-title no_toc" itemprop="headline">
+      
+        <a href="https://kyunghan1.github.io/naver-cloud-camp/HTML1" rel="permalink">[Day13] HTML 기본구조
+</a>
+      
+    </h2>
+    
+
+  <p class="page__meta">
+    
+      
+      <span class="page__meta-date">
+        <i class="far fa-calendar-alt" aria-hidden="true"></i>
+        <time datetime="2022-11-23T00:00:00+00:00">November 23, 2022</time>
+      </span>
+    
+
+    
+
+    
+  </p>
+
+
+    <p class="archive__item-excerpt" itemprop="description">예제에서 태그 하나하나 보기
+</p>
+  </article>
+</div>
+
+  
+    
+
+
+
+<div class="list__item">
+  <article class="archive__item" itemscope="" itemtype="https://schema.org/CreativeWork">
+    
+    <h2 class="archive__item-title no_toc" itemprop="headline">
+      
+        <a href="https://kyunghan1.github.io/naver-cloud-camp/ncpalaas4" rel="permalink">리눅스(Linux) 명령어
+</a>
+      
+    </h2>
+    
+
+  <p class="page__meta">
+    
+      
+      <span class="page__meta-date">
+        <i class="far fa-calendar-alt" aria-hidden="true"></i>
+        <time datetime="2022-11-23T00:00:00+00:00">November 23, 2022</time>
+      </span>
+    
+
+    
+
+    
+  </p>
+
+
+    <p class="archive__item-excerpt" itemprop="description">리눅스 기본 명령어 정리
+</p>
+  </article>
+</div>
+
+  
+    
+
+
+
+<div class="list__item">
+  <article class="archive__item" itemscope="" itemtype="https://schema.org/CreativeWork">
+    
+    <h2 class="archive__item-title no_toc" itemprop="headline">
+      
+        <a href="https://kyunghan1.github.io/knowledge/protocol/" rel="permalink">프로토콜과 웹의 변천사
+</a>
+      
+    </h2>
+    
+
+  <p class="page__meta">
+    
+      
+      <span class="page__meta-date">
+        <i class="far fa-calendar-alt" aria-hidden="true"></i>
+        <time datetime="2022-11-23T00:00:00+00:00">November 23, 2022</time>
+      </span>
+    
+
+    
+
+    
+  </p>
+
+
+    <p class="archive__item-excerpt" itemprop="description">Protocol &amp; Web
+</p>
+  </article>
+</div>
+
+  
+</div>
+
+
+<nav class="pagination">
+  
+  <ul>
+    
+    
+    <li><a href="https://kyunghan1.github.io/#" class="disabled"><span aria-hidden="true">Prev</span></a></li>
+    
+
+    
+    
+      <li><a href="https://kyunghan1.github.io/#" class="disabled current">1</a></li>
+    
+
+    
+    
+
+    
+    
+    
+
+    
+
+    
+    
+
+    
+      <li><a href="https://kyunghan1.github.io/page2/">2</a></li>
+    
+
+    
+    
+      <li><a href="https://kyunghan1.github.io/page2/">Next</a></li>
+    
+  </ul>
+</nav>
+
+
+
+  </div>
+</div>
+    </div>
+
+    
+
+    <div id="footer" class="page__footer">
+      <footer>
+        <!-- start custom footer snippets -->
+
+<!-- end custom footer snippets -->
+        <div class="page__footer-follow">
+  <ul class="social-icons">
+    
+      <li><strong>Follow:</strong></li>
+    
+
+    
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+    
+
+    
+      <li><a href="https://kyunghan1.github.io/feed.xml"><i class="fas fa-fw fa-rss-square" aria-hidden="true"></i> Feed</a></li>
+    
+  </ul>
+</div>
+
+<div class="page__footer-copyright">© 2022 KyungHan. Powered by <a href="https://jekyllrb.com/" rel="nofollow">Jekyll</a> &amp; <a href="https://mademistakes.com/work/minimal-mistakes-jekyll-theme/" rel="nofollow">Minimal Mistakes</a>.</div>
+
+      </footer>
+    </div>
+
+    
+  <script src="./KyungHan DevLog_files/main.min.js.다운로드"></script>
+
+
+
+
+
+
+
+  <!-- Global site tag (gtag.js) - Google Analytics -->
+<script async="" src="./KyungHan DevLog_files/js"></script>
+<script>
+  window.dataLayer = window.dataLayer || [];
+  function gtag(){dataLayer.push(arguments);}
+  gtag('js', new Date());
+
+  gtag('config', 'your tracking id here', { 'anonymize_ip': false});
+</script>
+
+
+
+
+
+
+
+
+
+  
+
+</body></html>
