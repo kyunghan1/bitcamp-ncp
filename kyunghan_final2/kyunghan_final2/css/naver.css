@@ -1,0 +1,272 @@
+
+/* div { border: 1px red solid;} */
+
+*{
+    margin: 0px;
+    padding: 0px;
+    box-sizing: border-box;
+}
+
+a { 
+    text-decoration: none;
+    color: #000;
+} 
+
+li { list-style: none }
+html,
+body{
+    display: block;
+    
+    position: relative;
+    text-decoration: none;
+    width: 1218px;
+    margin: 0 auto ;
+    background-color: #fff;
+    font-size: 16px;
+    font-weight: 300;
+    font-family: 'Nanum Gothic', sans-serif;
+    color: #000;
+}
+
+header{
+    display: flex;
+    flex-direction: column;
+    background-color: #fff;
+    border-bottom: 1px solid rgb(204, 195, 195);
+    border-top: 1px solid rgb(204, 195, 195);
+}
+
+.top_menu{
+    display: flex;
+    flex-direction: column;
+    margin-top: 15px;
+    margin-left: 970px;
+    margin-bottom: 30px;
+    margin-right: 1px;
+    height: 0px;
+}
+
+.top_menu li{
+    float: left;
+    font-size: 10px;
+}
+
+.top_menu a:hover{
+    text-decoration: underline;
+}
+
+.sl{
+    margin-left: 30px;
+   margin-bottom: 50px;
+   display: flex;
+   flex-direction: column;
+}
+
+.input_text{
+    position: relative;
+    width: 582px;
+    height: 53px;
+    outline: #19ce60;
+    border: 2px solid #19ce60;
+}
+
+.logo {
+    position: relative;   
+    display: inline;
+}
+
+.login_img {
+    padding-top: 10px;
+}
+
+.green_window{
+    position: relative;
+    margin-left: 250px;
+    margin-top: -65px;
+}
+
+.search_button{
+    position: relative;
+    margin-left: 780px;
+    margin-top: -53px;
+}
+
+.btn{
+    border: 0;
+    background-color: #fff;
+    outline: #fff;
+}
+
+.nav_list{
+    height: 60px;
+    border-top: 1px solid rgb(204, 195, 195);
+    border-bottom: 1px solid rgb(204, 195, 195);;
+    padding-top: 10px;
+}
+
+.nav_list li{
+    display: inline;
+    font-size: 15px;
+    font-weight: 700;
+    line-height: 30px;
+    text-decoration: solid;
+}
+
+.nav_list .list_ul li a:link,
+.nav_list .list_ul li a:visited{
+    color : #03c75a;
+    margin-left: 18px;
+    float: left;
+}
+
+.nav_list .list_ul2 li a:link,
+.nav_list .list_ul2 li a:visited{
+    color : #000;
+    margin-left: 12px;
+    float: left;
+}
+
+.nav_list .list_ul3 li a:link,
+.nav_list .list_ul3 li a:visited{
+    font-size: 13px;
+    color : rgb(83, 81, 81);
+    margin-left: 18px;
+    display: inline;
+}
+
+.list_ul3 a:hover{
+    text-decoration: underline;   
+}
+
+.mail_img{
+    margin-right: 5px;
+}
+
+.live_img{
+    width: 30px;
+    height: 20px;
+}
+
+.weather_img {
+    width: 260px;
+    height: 50px;
+    margin-top: -10px;
+    margin-left: 10px;
+}
+
+.banner {
+    width: 755px;
+    float: left;
+    margin-top: 5px;
+}
+
+.bb {
+    padding-top: 5px;
+}
+
+.banner_img {
+    width: 750px;
+    height: 135px;
+}
+
+.loginbox {
+    width: 350px;
+    float: right;
+    margin-top: 10px;      
+}
+.idpw {
+    padding: 16px 16px 12px 17px;
+    background-color: #f8f9fb;
+    border: 1px solid #dae1e6;
+    font-size: 12px;
+    height: 135px;
+}
+
+.list_ul4 li a:link,
+.list_ul4 li a:visited{
+    font-size: 13px;
+    color : rgb(83, 81, 81);
+}
+.list_ul4 a:hover{
+    text-decoration:underline;
+}
+.create{
+    float:right;
+    margin-right: 3px;
+}
+
+.login_img{
+    text-align: center;
+    padding-top: 10px;
+    padding-bottom: 10px;
+}
+
+.login_id, 
+.login_create {
+    width: 13px;
+    height: 14px;
+}
+
+.news_head{
+    padding: 15px 3px 16px 3px;
+    font-size: 13px;
+    max-lines: 18px;
+    line-height: 18px;
+    background-color: lightgray;
+}
+
+.news_link {
+    padding: 0px 3px 0px 0px;
+    float:right;
+}
+
+.news_head2{
+    padding: 15px 3px 16px 3px;
+    font-size: 16px;
+    line-height: 18px;
+    background-color: white;
+}
+
+.news_inter{
+    float:right;
+    margin-left:15px;
+}
+
+.news_group{
+    position: relative;
+    height: 260px;
+    border: 1px solid #dae1e6;
+}
+
+.news_group img{
+    margin:0px;
+    padding:0px;
+    border-collapse:collapse;
+    vertical-align:bottom;
+}
+
+.news_logo {
+    width:120px;
+    height:80px;
+}
+
+.naver_hel{
+    margin-left:15px;
+}
+
+.naver_hel img { 
+    border: none; margin: 0; padding: 0; display: inline; 
+    margin-right:-6px;
+}
+
+.thema_image1{
+    line-height:10px;
+    float: left;
+}
+
+.thema_image1-1 {
+    line-height: 20px;
+    display: inline; 
+    float:right;
+    width:200px;
+}

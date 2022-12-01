@@ -1,0 +1,187 @@
+*{
+    margin: 0px;
+    padding: 0px;
+    box-sizing: border-box;
+}
+
+a { 
+    text-decoration: none;
+    color: #000;
+} 
+
+li { list-style: none }
+html,
+body{
+    display: block;
+    
+    position: relative;
+    text-decoration: none;
+    width: 1218px;
+    margin: 0 auto ;
+    background-color: #fff;
+    font-size: 16px;
+    font-weight: 300;
+    font-family: 'Nanum Gothic', sans-serif;
+    color: #000;
+}
+
+/* div { border: 1px red solid;} */
+
+header{
+    display: flex;
+    flex-direction: column;
+    background-color: #fff;
+    border-bottom: 1px solid rgb(204, 195, 195);
+    border-top: 1px solid rgb(204, 195, 195);
+}
+
+.top_menu{
+    display: flex;
+    flex-direction: column;
+    margin-top: 15px;
+    margin-left: 800px;
+    margin-bottom: 30px;
+    margin-right: 150px;
+    height: 0px;
+}
+
+.top_menu li{
+    float: left;
+    font-size: 10px;
+}
+
+.top_menu a:hover{
+    text-decoration: underline;
+}
+
+.sl{
+    margin-left: 30px;
+   margin-bottom: 50px;
+   display: flex;
+   flex-direction: column;
+}
+
+.input_text{
+    position: relative;
+    width: 582px;
+    height: 53px;
+    outline: #19ce60;
+    border: 2px solid #19ce60;
+}
+
+.logo {
+    position: relative;   
+    display: inline;
+}
+
+.login_img {
+    padding-top: 10px;
+}
+
+.green_window{
+    position: relative;
+    margin-left: 250px;
+    margin-top: -65px;
+}
+
+.search_button{
+    position: relative;
+    margin-left: 780px;
+    margin-top: -53px;
+}
+
+.btn{
+    border: 0;
+    background-color: #fff;
+    outline: #fff;
+}
+
+.nav_list{
+    height: 60px;
+    border-top: 1px solid rgb(204, 195, 195);
+    padding-top: 10px;
+}
+
+.nav_list li{
+    display: inline;
+    font-size: 15px;
+    font-weight: 700;
+    line-height: 30px;
+    text-decoration: solid;
+}
+
+.nav_list .list_ul li a:link,
+.nav_list .list_ul li a:visited{
+    color : #03c75a;
+    margin-left: 18px;
+    float: left;
+}
+
+.nav_list .list_ul2 li a:link,
+.nav_list .list_ul2 li a:visited{
+    color : #000;
+    margin-left: 12px;
+    float: left;
+}
+
+.nav_list .list_ul3 li a:link,
+.nav_list .list_ul3 li a:visited{
+    font-size: 13px;
+    color : rgb(83, 81, 81);
+    margin-left: 18px;
+    display: inline;
+}
+
+.list_ul3 a:hover{
+    text-decoration: underline;   
+}
+
+.mail_img{
+    margin-right: 5px;
+}
+
+.live_img{
+    width: 30px;
+    height: 20px;
+}
+
+.weather_img {
+    width: 260px;
+    height: 50px;
+    margin-top: -10px;
+    margin-left: 10px;
+}
+
+.banner {
+    width: 755px;
+    float: left;
+    margin-top: 5px;
+}
+
+.bb {
+    padding-top: 5px;
+}
+
+.banner_img {
+    width: 750px;
+    height: 135px;
+}
+
+.loginbox {
+    text-align: center;
+    width: 350px;
+    float: right;
+    margin-top: 10px;      
+}
+.idpw {
+    padding: 16px 16px 12px 17px;
+    background-color: #f8f9fb;
+    border: 1px solid #dae1e6;
+    font-size: 12px;
+    height: 135px;
+}
+
+.login_img{
+    padding-top: 10px;
+    padding-bottom: 10px;
+}
