@@ -45,7 +45,7 @@ header{
     display: flex;
     flex-direction: column;
     margin-top: 15px;
-    margin-left: 900px;
+    margin-left: 978px;
     margin-bottom: 30px;
     margin-right: 1px;
     height: 0px;
@@ -347,8 +347,10 @@ header{
 }
 
 .naver_hel {
-    width: 750px;
+    width: 100%;
 }
+
+
 
 .today_topic a {
     font-weight: bold;
@@ -365,6 +367,38 @@ header{
     height: 45px;
 }
 
+.sideshop {
+    float: right;
+    width: 350px;
+}
+
+.sshop {
+    font-size: 13px;
+    height: 50px;
+}
+
+.trand {
+    font-weight: 600;
+    text-align: left;
+    margin-left: 1px;
+}
+
+
+.trand2, .trand3, .trand4 {
+    float: right;
+    margin-right: 10px;
+}
+
+.sshop a:hover {
+    text-decoration: underline;
+    text-decoration-color: #19ce60;
+    color: #19ce60;
+}
+
+.trand_img {
+    width: 17px;
+    height: 15px;
+}
 
 .table td  {
     padding: 15px;
@@ -376,16 +410,74 @@ header{
     opacity: 0.5;
 }
 
-.thema_image1{
-    line-height:10px;
-    float: left;
+.recdiv {
+    width: 750px;
+    height: 320px;
+    margin-top: 25px;
+    
 }
 
-.thema_image1-1 {
-    line-height: 20px;
-    display: inline; 
-    float:right;
-    width:200px;
+.recipe {
+    font-size: 13px;
+    
+}
+
+.rere {
+    width: 360px;
+    height: 180px;
+    
+}
+
+.rere1 {
+    width: 360px;
+    height: 180px;
+}
+
+.reci_str {
+    float: left;
+    color: #eaaa00;
+}
+
+.reci_str p {
+    color: black;
+    font-weight: 700;
+}
+
+.reci_str1 {
+    float: right;
+    color: #eaaa00
+}
+
+.reci_str1 p {
+    color: black;
+    font-weight: 700;
+}
+
+.cu {
+    width: 350px;
+    display: inline-block;
+    left: 833px;
+    bottom: 365px;
+    position: relative;
+    border: solid 1px #dae1e6;
+    text-align: left;
+    background-color: #f7f9fa;
+    font-size: 12px;
+    height: 40px;
+    padding-left: 3px;
+}
+
+.cu a:hover {
+    text-decoration: underline;
+}
+
+.sideshop_img {
+    width: 364px;
+    height: 380px;
+    display: inline-block;
+    position: relative;
+    right: 11px;
+    top: 7px;
 }
 
 
@@ -396,6 +488,7 @@ header{
     width:100%;
     display:flex;
     flex-direction: column;
+    
 }   
 .footer_in span:hover, .footer_down span:hover{
     text-decoration:underline;
@@ -487,3 +580,4 @@ header{
     width: 50px;
     height: 50px;
 }
+
