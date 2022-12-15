@@ -7,6 +7,46 @@
 <body>
 <h1>함수 - 함수와 window 객체</h1>
 <script>
+
+
+var obj = new Object()
+obj.name = '박경한';
+obj.age = 30;
+
+console.log(obj);
+console.log(obj.age);
+console.log(obj.name);
+
+var kkk = 3
+var kk = 2
+var k = 1
+
+console.log(k);
+console.log(window.kk);
+console.log(window['kkk']);
+console.log(k, kk, kkk);
+var arr = [k, kk, kkk];
+console.log(arr);
+
+var k = arr[0];
+var kk = arr[1];
+var kkk = arr[2];
+console.log(k, kk, kkk);
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 // 함수도 변수와 같이 자동으로 window 객체에 소속된다.
 function f1(str) { 
 	console.log(str);

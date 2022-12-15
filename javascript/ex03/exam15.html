@@ -31,6 +31,59 @@ console.log(f1.v2);
 console.log(f1.v3);
 f1.hello();
 f1.hello2();
+
+console.log("----------------------");
+
+
+(() => console.log("f1()....."))();
+
+f1.v6 = "홍길동";
+f1.v7 = 100;
+f1.v8 = true;
+f1.hello = function() {
+  console.log("Hello!");
+}
+
+f1.hello2 = function() {
+  console.log("Hello2!");
+}
+
+console.log(f1.v6);
+console.log(f1.v7);
+console.log(f1.v8);
+f1.hello();
+f1.hello2();
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 </script>
 
 </body>

@@ -12,6 +12,10 @@
 // 3) 함수를 이용해 객체 생성
 
 // 함수를 이용하여 객체를 초기화시키기
+//함수를 통해 객체를 생성하는기법 : 팩토리 메서드 패턴
+// 객체 생성 과정이 복잡할 경우 직접 객체를 생성하고 초기화시키기보다
+// 함수를 통해 객체를 생성하고 초기화 시키는것이 코드를 더 간결하게 만든다.
+
 function createScore(name, kor, eng, math) {
 	var obj = new Object();
 	obj.name = name;
@@ -27,6 +31,9 @@ var scores = []; // new Array();
 scores[0] = createScore("홍길동", 100, 100, 100);
 scores[1] = createScore("임꺽정", 90, 90, 90);
 scores[2] = createScore("유관순", 80, 80, 80);
+scores[3] = createScore("아아아", 80, 80, 80);
+scores[4] = createScore("오오오", 80, 80, 80);
+scores[5] = createScore("이이이", 80, 80, 80);
 
 for (var score of scores) {
     console.log(score.name, score.kor, score.eng, score.math, score.sum, score.aver);
@@ -39,6 +46,10 @@ console.log("---------------------------------------------");
 scores[2].kor = 100;
 scores[2].sum = scores[2].kor + scores[2].eng + scores[2].math;
 scores[2].aver = scores[2].sum / 3;
+
+score[5].kor = 100;
+scores[5].sum = scores[5].kor + scores[5].eng + scores[5].math;
+scores[5].aver = scores[5].sum / 3;
 
 for (var score of scores) {
     console.log(score.name, score.kor, score.eng, score.math, score.sum, score.aver);

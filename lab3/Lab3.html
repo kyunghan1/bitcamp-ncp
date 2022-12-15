@@ -1,0 +1,106 @@
+<!-- Lab3: Sliding Puzzle -->
+
+<html>
+<head>
+<title>Sliding Puzzle</title>
+
+<script type = "text/javascript">
+
+var puz = [["00.jpg","01.jpg","02.jpg","03.jpg"],
+	  ["10.jpg","11.jpg","12.jpg","13.jpg"],
+	  ["20.jpg","21.jpg","22.jpg","23.jpg"],
+	  ["30.jpg","31.jpg","32.jpg","33.jpg"]];
+			
+var x, y, i, j, s1, s2, s3, s4, temp;
+var c1,c2, c3, c4;
+
+function puzzle(x, y){
+			
+        if(x>0&&puz[x-1][y]=='33.jpg') {change(x,y,x-1,y);}
+        if(x<3&&puz[x+1][y]=='33.jpg') {change(x,y,x+1,y);}
+        if(y>0&&puz[x][y-1]=='33.jpg') {change(x,y,x,y-1);}
+        if(y<3&&puz[x][y+1]=='33.jpg') {change(x,y,x,y+1);}
+}
+
+function change(c1, c2, c3, c4){
+        temp = puz[c1][c2];
+        puz[c1][c2] = puz[c3][c4];
+        puz[c3][c4] = temp;
+        in_puzzle();
+}        
+
+function sort(){
+        for(i=0;i<20;i++){
+                s1 = Math.floor(Math.random()*4);
+                s2 = Math.floor(Math.random()*4);
+                s3 = Math.floor(Math.random()*4);
+                s4 = Math.floor(Math.random()*4);
+                temp = puz[s1][s2];
+                puz[s1][s2] = puz[s3][s4];
+                puz[s3][s4] = temp;
+        }
+        in_puzzle();        
+}
+
+function in_puzzle(){
+        document.getElementById('p00').src = puz[0][0];
+        document.getElementById('p01').src = puz[0][1];
+        document.getElementById('p02').src = puz[0][2];
+        document.getElementById('p03').src = puz[0][3];
+        document.getElementById('p10').src = puz[1][0];
+        document.getElementById('p11').src = puz[1][1];
+        document.getElementById('p12').src = puz[1][2];
+        document.getElementById('p13').src = puz[1][3];
+        document.getElementById('p20').src = puz[2][0];
+        document.getElementById('p21').src = puz[2][1];
+        document.getElementById('p22').src = puz[2][2];
+        document.getElementById('p23').src = puz[2][3];
+        document.getElementById('p30').src = puz[3][0];
+        document.getElementById('p31').src = puz[3][1];
+        document.getElementById('p32').src = puz[3][2];
+        document.getElementById('p33').src = puz[3][3];               
+} 
+
+function solve(){
+
+puz = [["00.jpg","01.jpg","02.jpg","03.jpg"],
+			["10.jpg","11.jpg","12.jpg","13.jpg"],
+			["20.jpg","21.jpg","22.jpg","23.jpg"],
+			["30.jpg","31.jpg","32.jpg","33.jpg"]];
+		
+		in_puzzle();
+			
+ } 
+</script>
+
+<div><table>
+    <tr>
+        <td><script language="JavaScript">
+with(window.document)
+  {
+    open();
+    writeln('<table cellpadding=2 cellspacing=0>');
+    for(var i=0;i<4;i++){
+		for(var j=0;j<4;j++)
+       {
+         if(j===0)
+           {
+             writeln('<tr>');
+           }
+         writeln('<td width=70 height=52 onclick="puzzle(',i,', ',j,')">');
+         writeln('<img src=',i,'',j,'.jpg border=0 width=70 height=52 id=p',i,'',j,'></a>');
+         writeln('</td>');
+        }
+	}
+      writeln('</table>');
+      close();
+    }
+            </script>
+        </td>
+    </tr>
+</table></div>
+<input type="button" value="Start" onclick="sort()" />
+<input type="button" value="Solve" onclick="solve()" />
+
+</body>
+</html>

@@ -1,0 +1,10 @@
+  /* div {border: solid 1px red;} */
+
+  td {
+    border: 1px solid black;
+    width: 150px;
+    height: 150px;
+    text-align: center;
+    font-weight: bold;
+    font-size: 60px;
+}

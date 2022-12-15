@@ -8,6 +8,7 @@
 <h1>이벤트 - 리스너 실행 순서</h1>
 <button id="btn1" onclick="var str='Hello1'; window.alert(str);">버튼1</button><br>
 
+
 <script>
 "use strict"
 
@@ -16,6 +17,8 @@
 //    태그의 onclick 속성에 등록된 자바스크립트 코드는 실행되지 않는다.
 // => 태그 객체에 대해 onclick 프로퍼티로 등록한 리스너가 먼저 실행된다.
 //    그런 후에 addEventListener()로 등록한 리스너를 호출한다.
+
+
 // => 주의!
 //    이 호출 순서에 의존하여 코드를 작성하지 말라!
 //    또한 세가지 방법 중에 한 가지 방법으로 리스너를 등록하라!
@@ -33,7 +36,8 @@ btn1.addEventListener("click", () => {
 
 
 // 태그의 onclick 속성 값을 설정했다면 그 값을 대체한다.
-//
+// 스크립트에 onclick을 썼을때 html 태그에 쓴 스크립트는 무시된다.
+// onclick 을 주석처리 했을때 html 태그에 있는 스크립트가 제일 먼저 출력된다.
 btn1.onclick = () => {
     var str = "Hello2";
     window.alert(str);

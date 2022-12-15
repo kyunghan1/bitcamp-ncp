@@ -34,6 +34,25 @@ f1.plus = function (a, b) {return a + b;}
 console.log(f1.age, f1.working); // OK!
 console.log(f1.plus(100, 200)); // OK!
 
+console.log('------------------------------');
+
+function f5() {
+	console.log('kkkk');
+}
+
+var f6;
+f6 = f5;
+
+f6();
+window.f6();
+
+f5.name = "dddd";
+f5.working = false;
+f5.minus = function (a, b) {return a - b;}
+
+console.log(f5.name, f5.working);
+console.log(f5.minus(500, 600));
+
 </script>
 </body>
 </html>

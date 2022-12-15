@@ -1,0 +1,35 @@
+/* /* #ttt-box{
+    background-color : #14bdac;
+    
+    width: 750px;
+    height: 450px;
+    margin: 15% 30%;
+    
+} */
+/* #box{
+    
+    width: 400px;
+    height: 350px;
+    margin-inline: 24%;
+    border-color: #CCCCCC;    
+} */
+#reset{
+    color: #14bdac;
+    margin: 7% 35%;
+} 
+/* td{
+    text-align: center;
+} */
+body{
+    margin: 5% 35%;
+}
+td {
+    background-color : #14bdac;
+    border: 1px solid #CCCCCC;
+    width: 200px;
+    height: 200px;
+    text-align: center;
+    font-weight: bold;
+    font-size: 35px;
+    
+}

@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>ex02</title>
+</head>
+<body>
+<h1>배열</h1>
+<script>
+"use strict"
+
+var arr = new Array();
+
+console.log(arr);
+
+arr[0] = "박"; //배열 0번째에 값 추가
+arr.push("경"); // 배열 1번째에 값 추가 위에꺼랑 똑같은거임
+arr.push("한");
+console.log(arr); //배열 출력
+
+console.log(arr.length); //배열 갯수 (3개)
+
+console.log(arr[0]); //배열 0번째부터 2까지 세로 출력
+console.log(arr[1]);
+console.log(arr[2]);
+// console.log(arr[5]);  아직 선언 전이라 undefined
+
+arr[5] = "짱"; // 갑자기 배열 5번째에 값 추가
+console.log(arr.length); //배열 갯수 (6개)
+console.log(arr); //배열 출력 ['박', '경', '한', 비어있음x2, '짱']
+
+
+</script>
+</body>
+</html>

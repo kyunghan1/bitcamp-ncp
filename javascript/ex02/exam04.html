@@ -25,6 +25,7 @@ v2 = 100; // OK!
 console.log(v2);
 
 // strict 모드에서는 변수를 선언하지 않고 사용하면 실행 오류가 발생한다!
+// var v3;
 v3 = 100; // 실행 오류!
 console.log(v3);
 
@@ -48,7 +49,8 @@ console.log(v5);
 //이렇게 첫 번째 문장으로 와야 한다. 물론 주석은 문장으로 간주하지 않는다.
 "use strict";
 console.log("strict 모드는 script 태그에서 첫 번째 문장으로 와야 한다.");
-v6 = null; // 변수를 선언하지 않았기 때문에 실행 오류 발생!
+// var v6;
+v6 = 100; // 변수를 선언하지 않았기 때문에 실행 오류 발생!
 console.log(v6);
 
 </script>

@@ -44,17 +44,21 @@ function f1() {
 document.querySelector("#link3").onclick = function() {
   alert("OK!");
   return false; // false를 리턴하면 a 태그의 기본 동작을 취소한다.
-}
+};
 
 document.querySelector("#link4").onclick = function(e) {
   e.preventDefault(); // a 태그의 기본 동작을 비활성화시킨다. 리스너 호출이 끝난 후 서버에 요청하지 않는다.
   alert("OK!");
-}
+};
+
+//link 3, 4 onclick으로 등록 했다면 return, preventDefault 둘중 하나로 취소 할 수 있다.
+//link 5, 6 addEventListener로 등록 했다면 return으로는 동작이 안되고 preventDefault를 써야지만 동작이 취소된다.
+
 
 document.querySelector("#link5").addEventListener("click", function() {
   alert("OK!");
   return false; // addEventListener()로 함수를 등록하면
-                // return 값으로 a 태그의 기본 동작을 취소할 수 없다.
+                // return 값으로 a 태그의 기본 동작을 취소할 수 없다. = a태그 정상 동작
 });
 
 document.querySelector("#link6").addEventListener("click", function(e) {

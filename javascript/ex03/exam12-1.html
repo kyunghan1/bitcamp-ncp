@@ -15,20 +15,22 @@
 //
 //
 
+// 1. 아래는 일반 함수 정의
 function f0() {
 	 return "안녕";
 }
 console.log(f0());
 
-
+// 2. 익명 함수 정의
 var f1 = function() {
 	return "안녕";
 };
 console.log(f1());
 
-// 애로우(arrow ) 함수 : 초간단 함수 정의 문법
+// 3. 애로우(arrow ) 함수 : 초간단 함수 정의 문법
 // 1) function 키워드를 제거한다.
 // 2) 대신 파라미터 블록과 코드 블록 사이에 화살표를 추가한다.
+// 3) 다른 언어(java)에서는 람다(lambda)라고 부른다.
 var f2 = () => {
 	return "안녕";
 };
@@ -41,7 +43,154 @@ console.log(f2());
 var f3 = () => "안녕";
 console.log(f3());
 
-console.log((() => "안녕")());
+console.log("-------------------------");
+
+// 4. 애로우 함수를 정의하자마자 호출하기
+console.log(function() {return "안녕ㅋ";} ());
+
+
+
+// 4. 애로우 함수를 정의하자마자 호출하기
+var f5 = () => "안녕ㅋ";
+console.log((()=> "안녕ㅋ")());
+console.log("-------------------------");
+
+
+console.log((function(a, b) {
+	return a + b;})(100, 200));
+
+console.log(((a, b) => a + b)(111, 222));
+
+console.log("-------------------------");
+
+((name) =>  console.log(name + "반가워요"))("방가");  //함수 한줄 표현
+
+((name) =>  {
+	console.log(name + "반가워요");   // 중괄호 생략 안한 표현
+})("방가");
+
+(function(name)  {
+	console.log(name + "반가워요");  // 익명함수 + 중괄호
+})("방가");
+
+var x = function(name)  {
+	console.log(name + "반가워요"); // 익명 함수 정의
+};
+x("방가");
+
+function x4(name)  {
+	console.log(name + "반가워요");  // 일반 함수 정의
+};
+x4("방가");
+
+console.log("-------------------------");
+
+var xx = function (name) {
+	console.log(name + "님 반갑습니다.");
+};
+xx("홍길동");
+
+(function (name) {
+	console.log(name + "님 반갑습니다.");
+})("홍길동");
+
+((name) => {
+	console.log(name + "님 반갑습니다.");
+})("홍길동");
+
+((name) => console.log(name + "님 반갑습니다."))("홍길동");
+
+console.log("------------------------");
+
+function plus(a, b) {
+	console.log(a + b);
+}
+plus(10, 20);
+
+var plus = function(a, b) {
+	console.log(a + b);
+}
+plus(10, 20);
+
+(function(a, b) {console.log(a + b);})(10, 20);
+
+((a, b) => console.log(a + b))(10, 20);
+
+console.log("------------------------");
+
+function minus(a, b) {
+	console.log(a - b);
+}
+minus(30, 20);
+
+var minus = function(a, b) {
+	console.log(a - b);
+}
+minus(30, 20);
+
+(function(a, b) {console.log(a - b);})(30, 20);
+
+((a, b) => console.log(a - b))(30, 20);
+
+console.log("------------------------");
+
+function gop(a, b) {
+	console.log(a * b);
+}
+gop(10, 20);
+
+var gop = function(a, b) {
+	console.log(a * b);
+}
+gop(10, 20);
+
+(function(a, b) {console.log(a * b);})(10, 20);
+
+((a, b) => console.log(a * b))(10, 20);
+
+console.log("------------------------");
+
+function multiple(a, b) {
+	console.log(a * b);
+}
+multiple(3, 7);
+
+var multiple = function(a, b) {
+	console.log(a * b);
+}
+multiple(3, 7);
+
+(function(a, b) {
+	console.log(a * b);
+})
+(3, 7);
+
+((a, b) => console.log(a * b))(3, 7);
+
+console.log("------------------------");
+
+function devide(a, b) {
+	console.log((a / b).toFixed(2));
+}
+devide(8, 3);
+
+var devide = function(a, b) {
+	console.log(a / b);
+}
+devide(8, 3);
+
+(function(a, b) {
+	console.log(a / b);
+})(8, 3);
+
+((a, b) => 
+	console.log(a / b)
+)(8, 3);
+
+console.log("------------------------");
+
+
+
 </script>
 
 </body>
