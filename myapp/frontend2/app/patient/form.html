@@ -1,0 +1,106 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+</head>
+<body>
+<h1>환자 정보 등록</h1>
+<form>
+<table border="1">
+  <tbody>
+    <tr>
+      <th>이름</th>
+      <td><input type="text" name="name" id="name"></td>
+    </tr>
+    <tr>
+      <th>전화번호</th>
+      <td><input type="text" name="tel" id="tel"></td>
+    </tr>
+    <tr>
+      <th>주소</th>
+      <td><input type="text" name="basicAddress" id="basicAddress"></td>
+    </tr>
+    <tr>
+      <th>상세주소</th>
+      <td><input type="text" name="detailAddress" id="detailAddress"></td>
+    </tr>
+    <tr>
+      <th>증상</th>
+      <td><input type="tel" name="symptome" id="symptome"></td>
+    </tr>
+    <tr>
+      <th>혈액형</th>
+      <td><input type="tel" name="bloodType" id="bloodType"></td>
+    </tr>
+    <tr>
+      <th>최근 14일간 해외 여행 여부</th>
+      <td><input type="tel" name="oversea" id="oversea"></td>
+    </tr>
+    <tr>
+      <th>체온</th>
+      <td><input type="tel" name="bodyHeat" id="bodyHeat"></td>
+    </tr>
+    <tr>
+      <th>혈압</th>
+      <td><input type="tel" name="bloodPressure" id="bloodPressure"></td>
+    </tr>
+    <tr>
+      <th>키</th>
+      <td><input type="tel" name="height" id="height"></td>
+    </tr>
+    <tr>
+      <th>몸무게</th>
+      <td><input type="tel" name="weight" id="weight"></td>
+    </tr>
+   
+  </tbody>
+</table>
+<button id="add-btn" type="button">등록</button>
+<button id="cancel-btn" type="button">취소</button>
+</form>
+
+<script>
+document.querySelector('#add-btn').onclick = (e) => {
+  var name = encodeURIComponent(document.querySelector('#name').value);
+  var tel = document.querySelector('#tel').value;
+  var basicAddress = encodeURIComponent(document.querySelector('#basicAddress').value);
+  var detailAddress = encodeURIComponent(document.querySelector('#detailAddress').value);
+  var symptome = encodeURIComponent(document.querySelector('#symptome').value);
+  var bloodType = document.querySelector('#bloodType').value;
+  var oversea = encodeURIComponent(document.querySelector('#oversea').value);
+  var bodyHeat = encodeURIComponent(document.querySelector('#bodyHeat').value);
+  var bloodPressure = document.querySelector('#bloodPressure').value;
+  var height = document.querySelector('#height').value;
+  var weight = document.querySelector('#weight').value;
+
+  // console.log(`name=${name}&tel=${tel}&email=${email}&degree=${degree}&school=${school}` +
+  //   `&major=${major}&wage=${wage}`);
+
+  fetch('http://localhost:8080/patients', {
+    method: 'POST',
+    headers: {
+      'Content-type': 'application/x-www-form-urlencoded'
+    },
+    body: `name=${name}&tel=${tel}&basicAddress=${basicAddress}&detailAddress=${detailAddress}&symptome=${symptome}` +
+      `&bloodType=${bloodType}&oversea=${oversea}&bodyHeat=${bodyHeat}&bloodPressure=${bloodPressure}&height=${height}&weight=${weight}`
+  })
+  .then((response) => {return response.json();})
+  .then((obj) => {
+    location.href = "list.html";
+  })
+  .catch((err) => {
+    alert("서버 요청 오류!");
+    console.log(err);
+  });
+};
+
+document.querySelector('#cancel-btn').onclick = (e) => {
+  location.href = "list.html";
+};
+
+</script>
+</body>
+</html>

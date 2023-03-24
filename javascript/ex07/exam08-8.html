@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>ex07</title>
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.1/jquery.min.js"></script>
+<!-- <script src="node_modules/jquery/dist/jquery.min.js"></script> -->
+<script>
+ 
+$(() => {
+  console.log("ready() 호출됨!111111");
+});
+
+$(document).ready(() => {
+  console.log("ready() 호출됨!22222");
+});
+
+$(() => {
+  console.log("ready() 호출됨!3333");
+});
+
+  window.onload = function() {
+    console.log("load 이벤트 발생!");
+  };
+
+  // ready() 와 onload로 등록한 함수는 jQuery 버전에 따라 실행 순서가 달라질수 있다
+  // 그러므로 하나만 쓰자
+</script>
+</head>
+<body>
+<h1>load 이벤트 - 실행 순서</h1>
+
+<script>
+  console.log("1111");
+</script>
+
+<script src="exam08.js"></script>
+
+<script>
+  console.log("2222");
+</script>
+
+</body>
+</html>
+
+
+
+
+

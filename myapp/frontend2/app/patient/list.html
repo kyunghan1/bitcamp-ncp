@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+</head>
+<body>
+<h1>환자 목록</h1>
+<a href="form.html">새로 등록</a>
+<table border="1">
+  <thead>
+    <tr>
+      <th>번호</th>
+      <th>이름</th>
+      <th>전화번호</th>
+      <th>증상</th>
+      <th>혈액형</th>
+      <th>해외여행여부</th>
+      <th>체온</th>
+      <th>혈압</th>
+      <th>키</th>
+      <th>몸무게</th>
+      <th>등록일</th>
+    </tr>
+  </thead>
+  <tbody>
+  </tbody>
+</table>
+
+<script>
+var tbody = document.querySelector("tbody");
+
+function getBloodTitle(bloodType) {
+  switch (bloodType) {
+    case 1: return "A형";
+    case 2: return "B형";
+    case 3: return "O형";
+    case 4: return "AB형";
+    default: return "";
+  }
+}
+
+fetch('http://localhost:8080/patients')
+  .then((response) => {return response.json();})
+  .then((obj) => {
+    var html = '';
+    for (var p of obj.data) {
+      html += `<tr>
+        <td>${p.no}</td>
+        <td><a href="view.html?no=${p.no}">${p.name} </a></td>
+        <td>${p.tel}</td>
+        <td>${p.symptome}</td>
+        <td>${getBloodTitle(p.bloodType)}</td>
+        <td>${p.oversea}</td>
+        <td>${p.bodyHeat}</td>
+        <td>${p.bloodPressure}</td>
+        <td>${p.height}</td>
+        <td>${p.weight}</td>
+        </tr>\n`;
+    }
+    tbody.innerHTML = html;
+  })
+  .catch((err) => {
+    alert("서버 요청 오류!");
+    console.log(err);
+  });  
+</script>
+</body>
+</html>

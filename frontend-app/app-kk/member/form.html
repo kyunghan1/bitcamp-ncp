@@ -1,0 +1,86 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+</head>
+<body>
+  <h1>학생 등록</h1>
+  <form>
+<table border="1">
+  <tbody>
+    <tr>
+      <td>이름</td>
+      <td><input type="text" name="name" id="f-name"></td>
+    </tr>
+    <tr>
+      <td>전화</td>
+      <td><input type="text" name="tel" id="f-tel"></td>
+    </tr>
+    <tr>
+      <td>우편번호</td>
+      <td><input type="text" name="postno" id="f-postno"></td>
+    </tr>
+    <tr>
+      <td>주소</td>
+      <td><input type="text" name="basicaddress" id="f-basicaddress"></td>
+    </tr>
+    <tr>
+      <td>상세주소</td>
+      <td><input type="text" name="detailaddress" id="f-detailaddress"></td>
+    </tr>
+    <tr>
+      <td>재직여부</td>
+      <td><input type="text" name="working" id="f-working" placeholder="0.백수 1.재직중"></td>
+    </tr>
+    <tr>
+      <td>성별</td>
+      <td><input type="text" name="gender" id="f-gender" placeholder="0.남자 1.여자"></td>
+    </tr>
+    <tr>
+      <td>전공</td>
+      <td><input type="text" name="level" id="f-level" placeholder="0.비전공 1.전공"></td>
+    </tr>
+  </tbody>
+</table>
+<button id="add-btn"type="button">등록</button>
+<button id="cancel-btn" type="button">취소</button>
+  </form>
+  <script>
+    document.querySelector('#add-btn').onclick = (e) => {
+      var name = encodeURIComponent(document.querySelector('#f-name').value);
+      var tel = encodeURIComponent(document.querySelector('#f-tel').value);
+      var postno = encodeURIComponent(document.querySelector('#f-postno').value);
+      var basicaddress = encodeURIComponent(document.querySelector('#f-basicaddress').value);
+      var detailaddress = encodeURIComponent(document.querySelector('#f-detailaddress').value);
+      var working = document.querySelector('#f-working').value;
+      var gender = document.querySelector('#f-gender').value;
+      var level = document.querySelector('#f-level').value;
+
+      fetch('http://localhost:8080/members', {
+        method : 'POST',
+        headers:{
+          'Content-type':'application/x-www-form-urlencoded'
+        },
+        body: `name=${name}&tel=${tel}&postno=${postno}
+        &basicaddress=${basicaddress}&detailaddress=${detailaddress}&working=${working}
+        &gender=${gender}&level=${level}`
+      })
+      .then((response) => {return response.json();})
+      .then((obj) => {
+        location.href = "list.html";
+      })
+      .catch((err) => {
+        alert("서버 요청 오류!");
+        console.log(err);
+      });
+    };
+
+document.querySelector('#cancel-btn').onclick = (e) => {
+  location.href = "list.html";
+};
+  </script>
+</body>
+</html>

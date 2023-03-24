@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>ex07</title>
+</head>
+<body>
+<h1>AJAX - XMLHttpRequest()</h1>
+<button id="btn1">요청</button><br>
+<textarea id="ta" cols="80" rows="10"></textarea>
+
+<script>
+"use strict"
+
+var ta = document.querySelector("#ta");
+document.querySelector("#btn1").onclick = () => {
+var xhr = new XMLHttpRequest();
+xhr.open("GET", "http://localhost:3000/exam01-1-1", false);
+xhr.send();
+ta.value = xhr.responseText;
+};
+
+</script>
+</body>
+</html>
+
+
+
+
+

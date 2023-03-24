@@ -1,0 +1,89 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+</head>
+<body>
+  <h1>강사 정보 등록</h1>
+  <form>
+<table border="1">
+  <tbody>
+    <tr>
+      <td>이름</td>
+      <td><input type="text" name="name" id="f-name"></td>
+    </tr>
+    <tr>
+      <td>전화</td>
+      <td><input type="text" name="tel" id="f-tel"></td>
+    </tr>
+    <tr>
+      <td>이메일</td>
+      <td><input type="text" name="email" id="f-email"></td>
+    </tr>
+    <tr>
+      <td>최종학력</td>
+      <td>
+        <select name="highGrade" id="f-highGrade">
+          <option value="0">학사</option>
+          <option value="1">석사</option>
+          <option value="2">박사</option>
+        </select>
+      </td>
+    </tr>
+    <tr>
+      <td>대학교</td>
+      <td><input type="text" name="univ" id="f-univ"></td>
+    </tr>
+    <tr>
+      <td>전공</td>
+      <td>
+        <input type="text" name="major" id="f-major"></td>
+    </tr>
+    <tr>
+    <td>강사료</td>
+      <td>
+        <input type="text" name="pay" id="f-pay"></td>
+    </tr>
+  </tbody>
+</table>
+<button id="add-btn"type="button">등록</button>
+<button id="cancel-btn" type="button">취소</button>
+  </form>
+  <script>
+    document.querySelector('#add-btn').onclick = (e) => {
+      var name = encodeURIComponent(document.querySelector('#f-name').value);
+      var tel = document.querySelector('#f-tel').value;
+      var email = encodeURIComponent(document.querySelector('#f-email').value);
+      var highGrade = document.querySelector('#f-highGrade').value;
+      var univ = encodeURIComponent(document.querySelector('#f-univ').value);
+      var major = encodeURIComponent(document.querySelector('#f-major').value);
+      var pay = document.querySelector('#f-pay').value;
+
+      fetch('http://localhost:8080/teachers', {
+        method : 'POST',
+        headers:{
+          'Content-type':'application/x-www-form-urlencoded'
+        },
+        body: `name=${name}&tel=${tel}&email=${email}
+        &highGrade=${highGrade}&univ=${univ}&major=${major}
+        &pay=${pay}`
+      })
+      .then((response) => {return response.json();})
+      .then((obj) => {
+        location.href = "list1.html";
+      })
+      .catch((err) => {
+        alert("서버 요청 오류!");
+        console.log(err);
+      });
+    };
+
+document.querySelector('#cancel-btn').onclick = (e) => {
+  location.href = "list1.html";
+};
+  </script>
+</body>
+</html>
